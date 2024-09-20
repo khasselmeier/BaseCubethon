@@ -1,9 +1,10 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Credits : MonoBehaviour
 {
-    public void Quit()
+    public void Restart()
     {
-        Application.Quit();
+        SceneManager.LoadScene("Menu");
     }
 }

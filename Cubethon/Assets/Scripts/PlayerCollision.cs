@@ -4,12 +4,22 @@ public class PlayerCollision : MonoBehaviour
 {
    public PlayerMovement movement;
 
-   void OnCollisionEnter(Collision collisionInfo)
+   public delegate void HitObstacle(Collision collisionInfo);
+   public static event HitObstacle OnHitObstacle;
+
+   private void OnCollisionEnter(Collision collisionInfo)
    {
         if (collisionInfo.collider.tag == "Obstacle")
         {
+            Debug.Log("We hit an obstacle");
+
+            if (OnHitObstacle != null)
+            {
+                OnHitObstacle(collisionInfo);
+            }
+
             movement.enabled = false;
-            FindObjectOfType<GameManager>().EndGame();
+            //FindObjectOfType<GameManager>().EndGame();
         }
    }
 }

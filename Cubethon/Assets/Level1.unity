@@ -23,22 +23,22 @@ RenderSettings:
   m_AmbientSkyColor: {r: 0.7924528, g: 0.7924528, b: 0.7924528, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
-  m_AmbientIntensity: 1
+  m_AmbientIntensity: 2.67
   m_AmbientMode: 0
-  m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 0}
+  m_SubtractiveShadowColor: {r: 0.627451, g: 0.41960785, b: 0.6007978, a: 1}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 8401881fcb9afd34eb383fc90bbbbddc, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
   m_HaloTexture: {fileID: 0}
   m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
   m_DefaultReflectionMode: 0
-  m_DefaultReflectionResolution: 128
+  m_DefaultReflectionResolution: 2048
   m_ReflectionBounces: 1
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.19528377, g: 0.097322635, b: 0.1191001, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -402,14 +402,9 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8736400206198929642, guid: 2c964cb6a7d9a254791bf6621d809631, type: 3}
   m_PrefabInstance: {fileID: 530633198}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &410159644 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8736400206198929642, guid: 2c964cb6a7d9a254791bf6621d809631, type: 3}
-  m_PrefabInstance: {fileID: 1100471604}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &411970381 stripped
+--- !u!114 &385315580 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 614019989883006380, guid: c70d31102398aff4bb17a18a3fe87034, type: 3}
+  m_CorrespondingSourceObject: {fileID: 797893977600491945, guid: c70d31102398aff4bb17a18a3fe87034, type: 3}
   m_PrefabInstance: {fileID: 614019989740521185}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
@@ -418,6 +413,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2d451fd59ea53f4b9b3febb82d8edfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &410159644 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8736400206198929642, guid: 2c964cb6a7d9a254791bf6621d809631, type: 3}
+  m_PrefabInstance: {fileID: 1100471604}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &431391416
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2420,6 +2420,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 797893977600491945, guid: c70d31102398aff4bb17a18a3fe87034, type: 3}
+      propertyPath: completeLevelUI
+      value: 
+      objectReference: {fileID: 822094803}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c70d31102398aff4bb17a18a3fe87034, type: 3}
 --- !u!1001 &4711703577217610023
@@ -2494,6 +2498,22 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1517923022}
+    - target: {fileID: 7124926340270117425, guid: 0d79307c938eadc46893fd65bf4f8648, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7124926340270117425, guid: 0d79307c938eadc46893fd65bf4f8648, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7124926340270117425, guid: 0d79307c938eadc46893fd65bf4f8648, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 122.95868
+      objectReference: {fileID: 0}
+    - target: {fileID: 7124926340270117425, guid: 0d79307c938eadc46893fd65bf4f8648, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 115
+      objectReference: {fileID: 0}
     - target: {fileID: 7124926340270117455, guid: 0d79307c938eadc46893fd65bf4f8648, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -2703,7 +2723,7 @@ PrefabInstance:
     - target: {fileID: 7604615132404119303, guid: 51d1bdd78d0677245a817c5e750b1118, type: 3}
       propertyPath: gameManager
       value: 
-      objectReference: {fileID: 411970381}
+      objectReference: {fileID: 385315580}
     - target: {fileID: 7604615132404119323, guid: 51d1bdd78d0677245a817c5e750b1118, type: 3}
       propertyPath: m_RootOrder
       value: 8
