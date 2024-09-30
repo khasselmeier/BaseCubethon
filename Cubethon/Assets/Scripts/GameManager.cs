@@ -119,34 +119,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    /*private void ApplyColorChangeToObstacles(Color newColor)
-    {
-        GameObject[] obstacles = GameObject.FindGameObjectsWithTag("Obstacle");
-
-        if (obstacles.Length == 0)
-        {
-            Debug.LogWarning("No obstacles found with the tag 'Obstacle'.");
-            return;
-        }
-
-        foreach (GameObject obstacle in obstacles)
-        {
-            Renderer obstacleRenderer = obstacle.GetComponent<Renderer>();
-            if (obstacleRenderer != null)
-            {
-                obstacleRenderer.material.color = newColor;
-                Debug.Log("Changed color of obstacle: " + obstacle.name); // Log the change
-
-                // Log the color change for replay
-                ColorChangeEventManager.LogColorChange(newColor); // Log this change
-            }
-            else
-            {
-                Debug.LogWarning("Renderer not found on obstacle: " + obstacle.name);
-            }
-        }
-    }*/
-
     private void ShowReplayMessage()
     {
         if (replayText != null)

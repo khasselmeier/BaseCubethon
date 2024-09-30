@@ -21,7 +21,7 @@ public class ScoreMultiplierManager : MonoBehaviour
     private System.Collections.IEnumerator ApplyMultiplier(float multiplierAmount, float duration)
     {
         activeMultiplier = multiplierAmount;
-        OnMultiplierChanged.Invoke(activeMultiplier);  // Notify listeners about the multiplier change
+        OnMultiplierChanged.Invoke(activeMultiplier);  // notify listeners about the multiplier change
         //Debug.Log("Multiplier activated: " + multiplierAmount + " for " + duration + " seconds.");
 
         yield return new WaitForSeconds(duration);
@@ -29,6 +29,6 @@ public class ScoreMultiplierManager : MonoBehaviour
         activeMultiplier = 1f;
         OnMultiplierChanged.Invoke(activeMultiplier);
 
-        Debug.Log("Multiplier reset to normal.");
+        Debug.Log("Multiplier reset to normal");
     }
 }

@@ -21,21 +21,19 @@ public class ColorChangeEventManager : MonoBehaviour
         }
     }
 
-    // Method to trigger color change
     public static void TriggerColorChange(Color newColor)
     {
-        float timestamp = Time.timeSinceLevelLoad; // Get current time
+        float timestamp = Time.timeSinceLevelLoad;
         colorChangeLog.Add(new ColorChangeEvent(newColor, timestamp));
-        //Debug.Log("Color change triggered: " + ColorUtility.ToHtmlStringRGB(newColor));
+        //Debug.Log("Color change triggered");
 
-        // Invoke the event
         onColorChange.Invoke(newColor);
     }
 
     public static void LogColorChange(Color color)
     {
-        float timestamp = Time.timeSinceLevelLoad; // Get current time
+        float timestamp = Time.timeSinceLevelLoad;
         colorChangeLog.Add(new ColorChangeEvent(color, timestamp));
-        //Debug.Log("Color logged for replay: " + ColorUtility.ToHtmlStringRGB(color));
+        //Debug.Log("Color logged for replay");
     }
 }
